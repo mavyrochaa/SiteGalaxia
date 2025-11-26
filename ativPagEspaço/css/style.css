@@ -3,3 +3,111 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background: url("../img/Fundo.jpg") no-repeat center/cover;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.logo {
+    width: 55px;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4));
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.card {
+    width: 330px;
+    padding: 50px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px) contrast(1.15);
+    color: white;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.card-texto{
+    padding: 25px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ffffffbb;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    backdrop-filter: brightness(1.4);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    filter: grayscale(20%) contrast(110%) drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+    transition: 0.4s;
+}
+
+.foto:hover {
+    filter: grayscale(0%) contrast(130%) brightness(115%) drop-shadow(0 0 12px white);
+    transform: scale(1.06);
+}
+
+.newsletter-box {
+    margin-top: 150px;
+    padding: 25px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.newsletter-box input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
